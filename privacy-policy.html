@@ -28,9 +28,15 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 </div>
 <h1>Sacred Trails - Privacy Policy</h1>
 <br>
-<p><strong>Last Updated: April 2026</strong></p>
+<p><strong>Last Updated: July 18, 2026</strong></p>
 <br>
 <p>This Privacy Policy describes how Sacred Trails ("App," "we," "us," or "our"), developed by Luke Chiang ("Data Controller"), collects, uses, stores, and protects your personal data. We are committed to protecting your privacy in compliance with the <strong>EU General Data Protection Regulation (GDPR)</strong>, the <strong>Japan Act on the Protection of Personal Information (APPI)</strong>, the <strong>Brazil Lei Geral de Protecao de Dados (LGPD)</strong>, and other applicable data protection laws.</p>
+<h3>Version-Specific Notice</h3>
+<ul>
+<li><strong>Version 1.3.8 and later:</strong> Progress backup is a user-initiated local JSON export/import. The App does not upload new progress backups to a server. Safety Tracking stores up to the 288 most recent points on the device only while the App can run; it creates a plain-text summary that leaves the device only when you explicitly share it. It does not create a server session, tracking link, access token, or 7-day server record. Firebase sign-in and Firestore access remain available only so existing users can manage or delete old cloud data and their account.</li>
+<li><strong>Version 1.3.7 and earlier:</strong> If you enable the legacy Cloud Backup or server-based Safety Tracking/share feature, data may still be processed as described below, including Firestore progress storage and token-link tracking records retained for up to 7 days. We recommend updating to version 1.3.8 or later.</li>
+</ul>
+<p>Throughout this policy, references to Cloud Backup, server Safety Tracking, tracking links or tokens, and 7-day tracking retention apply only to version 1.3.7 and earlier. In version 1.3.8 and later, you choose where exported JSON files and shared safety text are sent; the selected destination then processes them under its own privacy terms.</p>
 <br>
 <hr>
 <br>
@@ -60,7 +66,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <tr><th>Dual Pilgrim mode setting</th><th>Track whether you are pursuing both pilgrimages</th><th>SharedPreferences</th></tr>
 </table>
 <br>
-<h3>2.2 Data Transmitted to a Server (Only When Safety Tracking Is Enabled)</h3>
+<h3>2.2 Data Transmitted to a Server (Legacy Version 1.3.7 and Earlier Only)</h3>
 <br>
 <table>
 <tr><th>Data</th><th>Purpose</th><th>Storage</th><th>Retention</th></tr>
@@ -74,7 +80,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p><strong>No tracking data is ever collected without your affirmative, informed consent.</strong></p>
 <br>
-<h3>2.3 Cloud Backup (Optional Sign-In)</h3>
+<h3>2.3 Cloud Backup (Legacy Version 1.3.7 and Earlier; Legacy Deletion Only in 1.3.8+)</h3>
 <br>
 <p>If you choose to sign in with Google or Apple, the following data is collected and stored in Google Cloud Firestore:</p>
 <br>
@@ -127,11 +133,11 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p>Achievement progress, language preferences, weather cache, and route settings are stored using Flutter's SharedPreferences on your device. This data is not encrypted beyond the device-level encryption provided by your operating system (iOS Data Protection / Android file-based encryption).</p>
 <br>
-<h3>5.2 Server Storage (Safety Tracking Only)</h3>
+<h3>5.2 Server Storage (Legacy Version 1.3.7 and Earlier Only)</h3>
 <br>
 <p>When Safety Tracking is enabled, GPS coordinates and timestamps are transmitted via <strong>HTTPS</strong> (TLS 1.2+). Access to tracking data is controlled by a unique, cryptographically random token generated for each tracking session.</p>
 <br>
-<h3>5.3 Cloud Storage (Cloud Backup Only)</h3>
+<h3>5.3 Cloud Storage (Legacy Version 1.3.7 and Earlier Only)</h3>
 <br>
 <p>When you sign in and sync, your progress data (without GPS coordinates) is stored in <strong>Google Cloud Firestore</strong> in the <strong>asia-northeast1 (Tokyo)</strong> region. Data is encrypted at rest and in transit by Google Cloud. Access is restricted to your authenticated account only, enforced by Firestore Security Rules.</p>
 <br>

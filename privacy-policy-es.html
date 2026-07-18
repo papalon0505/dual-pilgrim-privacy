@@ -28,9 +28,13 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 </div>
 <h1>Sacred Trails - Política de Privacidad</h1>
 <br>
-<p><strong>Última actualización: 24 de marzo de 2026</strong></p>
+<p><strong>Última actualización: 18 de julio de 2026</strong></p>
 <br>
 <p>Esta Política de Privacidad describe cómo Sacred Trails ("Aplicación," "nosotros," "nos" o "nuestro"), desarrollada por Luke Chiang ("Responsable del Tratamiento"), recopila, utiliza, almacena y protege sus datos personales. Nos comprometemos a proteger su privacidad en cumplimiento con el <strong>Reglamento General de Protección de Datos de la UE (RGPD)</strong>, la <strong>Ley de Protección de Información Personal de Japón (APPI)</strong>, la <strong>Ley General de Protección de Datos de Brasil (LGPD)</strong> y otras leyes aplicables de protección de datos.</p>
+<h3>Aviso específico por versión</h3><ul>
+<li><strong>Versión 1.3.8 y posteriores:</strong> La copia de progreso es una exportación/importación JSON local iniciada por usted. La Aplicación no carga nuevas copias de progreso en un servidor. El Seguimiento de Seguridad guarda en el dispositivo hasta los 288 puntos más recientes solo mientras la Aplicación puede ejecutarse y crea un resumen de texto sin formato que sale del dispositivo únicamente cuando usted lo comparte expresamente. No crea una sesión de servidor, enlace de seguimiento, token de acceso ni registro de servidor de 7 días. El inicio de sesión con Firebase y el acceso a Firestore se mantienen solo para que los usuarios existentes administren o eliminen datos antiguos en la nube y su cuenta.</li>
+<li><strong>Versión 1.3.7 y anteriores:</strong> Si activa la antigua Copia de Seguridad en la Nube o el Seguimiento de Seguridad/uso compartido basado en servidor, los datos aún pueden tratarse como se describe a continuación, incluido el almacenamiento del progreso en Firestore y registros de seguimiento mediante enlace con token conservados hasta 7 días. Recomendamos actualizar a la versión 1.3.8 o posterior.</li></ul>
+<p>En esta política, las referencias a Copia de Seguridad en la Nube, Seguimiento de Seguridad en servidor, enlaces o tokens de seguimiento y retención de 7 días se aplican solo a la versión 1.3.7 y anteriores. En la versión 1.3.8 y posteriores, usted elige el destino de los archivos JSON exportados y del texto de seguridad compartido; el destino elegido los trata conforme a sus propias condiciones de privacidad.</p>
 <br>
 <hr>
 <br>
@@ -60,7 +64,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <tr><th>Ajuste del modo Sacred Trails</th><th>Registrar si está realizando ambas peregrinaciones</th><th>SharedPreferences</th></tr>
 </table>
 <br>
-<h3>2.2 Datos transmitidos a un servidor (solo cuando el Seguimiento de Seguridad está habilitado)</h3>
+<h3>2.2 Datos transmitidos a un servidor (solo versión antigua 1.3.7 y anteriores)</h3>
 <br>
 <table>
 <tr><th>Dato</th><th>Propósito</th><th>Almacenamiento</th><th>Retención</th></tr>
@@ -74,7 +78,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p><strong>Nunca se recopilan datos de seguimiento sin su consentimiento afirmativo e informado.</strong></p>
 <br>
-<h3>2.3 Copia de Seguridad en la Nube (inicio de sesión opcional)</h3>
+<h3>2.3 Copia de Seguridad en la Nube (versión antigua 1.3.7 y anteriores; en 1.3.8+ solo eliminación heredada)</h3>
 <br>
 <p>Si decide iniciar sesión con Google o Apple, se recopilan y almacenan los siguientes datos en Google Cloud Firestore:</p>
 <br>
@@ -127,11 +131,11 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p>El progreso de logros, las preferencias de idioma, la caché meteorológica y la configuración de rutas se almacenan utilizando SharedPreferences de Flutter en su dispositivo. Estos datos no están cifrados más allá del cifrado a nivel de dispositivo proporcionado por su sistema operativo (Protección de Datos de iOS / cifrado basado en archivos de Android).</p>
 <br>
-<h3>5.2 Almacenamiento en servidor (solo Seguimiento de Seguridad)</h3>
+<h3>5.2 Almacenamiento en servidor (solo versión antigua 1.3.7 y anteriores)</h3>
 <br>
 <p>Cuando el Seguimiento de Seguridad está habilitado, las coordenadas GPS y las marcas temporales se transmiten a través de <strong>HTTPS</strong> (TLS 1.2+). El acceso a los datos de seguimiento está controlado por un token único criptográficamente aleatorio generado para cada sesión de seguimiento.</p>
 <br>
-<h3>5.3 Almacenamiento en la nube (solo Copia de Seguridad en la Nube)</h3>
+<h3>5.3 Almacenamiento en la nube (solo versión antigua 1.3.7 y anteriores)</h3>
 <br>
 <p>Cuando inicia sesión y sincroniza, sus datos de progreso (sin coordenadas GPS) se almacenan en <strong>Google Cloud Firestore</strong> en la región <strong>asia-northeast1 (Tokio)</strong>. Los datos están cifrados en reposo y en tránsito por Google Cloud. El acceso está restringido únicamente a su cuenta autenticada, garantizado mediante las reglas de seguridad de Firestore.</p>
 <br>

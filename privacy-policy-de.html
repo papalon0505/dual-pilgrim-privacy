@@ -28,9 +28,13 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 </div>
 <h1>Sacred Trails - Datenschutzerklärung</h1>
 <br>
-<p><strong>Zuletzt aktualisiert: 24. März 2026</strong></p>
+<p><strong>Zuletzt aktualisiert: 18. Juli 2026</strong></p>
 <br>
 <p>Diese Datenschutzerklärung beschreibt, wie Sacred Trails („App", „wir", „uns" oder „unser"), entwickelt von Luke Chiang („Verantwortlicher"), Ihre personenbezogenen Daten erhebt, verwendet, speichert und schützt. Wir verpflichten uns zum Schutz Ihrer Privatsphäre in Übereinstimmung mit der <strong>Datenschutz-Grundverordnung (DSGVO) der EU</strong>, dem <strong>japanischen Gesetz zum Schutz personenbezogener Daten (APPI)</strong>, dem <strong>brasilianischen Lei Geral de Proteção de Dados (LGPD)</strong> sowie anderen anwendbaren Datenschutzgesetzen.</p>
+<h3>Versionsspezifischer Hinweis</h3><ul>
+<li><strong>Version 1.3.8 und neuer:</strong> Die Fortschrittssicherung ist ein von Ihnen gestarteter lokaler JSON-Export/-Import. Die App lädt keine neuen Fortschrittssicherungen auf einen Server hoch. Die Sicherheitsverfolgung speichert nur während der möglichen Ausführung der App bis zu 288 aktuelle Punkte auf dem Gerät und erzeugt eine Klartext-Zusammenfassung, die das Gerät nur verlässt, wenn Sie sie ausdrücklich teilen. Es werden keine Serversitzung, kein Tracking-Link, kein Zugriffstoken und kein sieben Tage gespeicherter Serverdatensatz erstellt. Firebase-Anmeldung und Firestore-Zugriff bleiben nur bestehen, damit vorhandene Benutzer alte Cloud-Daten und ihr Konto verwalten oder löschen können.</li>
+<li><strong>Version 1.3.7 und älter:</strong> Wenn Sie die frühere Cloud-Sicherung oder serverbasierte Sicherheitsverfolgung/Freigabe aktivieren, können Daten weiterhin wie nachstehend beschrieben verarbeitet werden, einschließlich Fortschrittsspeicherung in Firestore und tokenbasierten Tracking-Datensätzen, die bis zu sieben Tage aufbewahrt werden. Wir empfehlen ein Update auf Version 1.3.8 oder neuer.</li></ul>
+<p>Verweise in dieser Erklärung auf Cloud-Sicherung, serverbasierte Sicherheitsverfolgung, Tracking-Links oder -Token und eine siebentägige Aufbewahrung gelten nur für Version 1.3.7 und älter. Ab Version 1.3.8 wählen Sie das Ziel exportierter JSON-Dateien und geteilter Sicherheitstexte selbst; das gewählte Ziel verarbeitet sie anschließend nach seinen eigenen Datenschutzbestimmungen.</p>
 <br>
 <hr>
 <br>
@@ -60,7 +64,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <tr><th>Dual-Pilgrim-Moduseinstellung</th><th>Erfassung, ob Sie beide Pilgerwege verfolgen</th><th>SharedPreferences</th></tr>
 </table>
 <br>
-<h3>2.2 An einen Server übermittelte Daten (nur bei aktivierter Sicherheitsverfolgung)</h3>
+<h3>2.2 An einen Server übermittelte Daten (nur ältere Version 1.3.7 und früher)</h3>
 <br>
 <table>
 <tr><th>Daten</th><th>Zweck</th><th>Speicherung</th><th>Aufbewahrungsfrist</th></tr>
@@ -74,7 +78,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p><strong>Es werden niemals Verfolgungsdaten ohne Ihre ausdrückliche, informierte Einwilligung erhoben.</strong></p>
 <br>
-<h3>2.3 Cloud-Sicherung (optionale Anmeldung)</h3>
+<h3>2.3 Cloud-Sicherung (ältere Version 1.3.7 und früher; ab 1.3.8 nur Alt-Datenlöschung)</h3>
 <br>
 <p>Wenn Sie sich mit Google oder Apple anmelden, werden die folgenden Daten erhoben und in Google Cloud Firestore gespeichert:</p>
 <br>
@@ -127,11 +131,11 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p>Erfolgsfortschritt, Spracheinstellungen, Wetter-Cache und Routeneinstellungen werden mittels Flutters SharedPreferences auf Ihrem Gerät gespeichert. Diese Daten sind über die vom Betriebssystem Ihres Geräts bereitgestellte Verschlüsselung hinaus nicht zusätzlich verschlüsselt (iOS Data Protection / Android dateibasierte Verschlüsselung).</p>
 <br>
-<h3>5.2 Serverspeicherung (nur Sicherheitsverfolgung)</h3>
+<h3>5.2 Serverspeicherung (nur ältere Version 1.3.7 und früher)</h3>
 <br>
 <p>Bei aktivierter Sicherheitsverfolgung werden GPS-Koordinaten und Zeitstempel über <strong>HTTPS</strong> (TLS 1.2 oder höher) übertragen. Der Zugriff auf Verfolgungsdaten wird durch ein einzigartiges, kryptografisch zufälliges Token kontrolliert, das für jede Verfolgungssitzung generiert wird.</p>
 <br>
-<h3>5.3 Cloud-Speicherung (nur Cloud-Sicherung)</h3>
+<h3>5.3 Cloud-Speicherung (nur ältere Version 1.3.7 und früher)</h3>
 <br>
 <p>Wenn Sie sich anmelden und synchronisieren, werden Ihre Fortschrittsdaten (ohne GPS-Koordinaten) in <strong>Google Cloud Firestore</strong> in der Region <strong>asia-northeast1 (Tokio)</strong> gespeichert. Die Daten werden von Google Cloud im Ruhezustand und während der Übertragung verschlüsselt. Der Zugriff ist ausschließlich auf Ihr authentifiziertes Konto beschränkt und wird durch Firestore-Sicherheitsregeln durchgesetzt.</p>
 <br>

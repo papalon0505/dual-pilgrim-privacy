@@ -28,9 +28,13 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 </div>
 <h1>Sacred Trails - Politique de confidentialité</h1>
 <br>
-<p><strong>Dernière mise à jour : 24 mars 2026</strong></p>
+<p><strong>Dernière mise à jour : 18 juillet 2026</strong></p>
 <br>
 <p>La présente Politique de confidentialité décrit la manière dont Sacred Trails (« Application », « nous », « notre » ou « nos »), développée par Luke Chiang (« Responsable du traitement »), collecte, utilise, stocke et protège vos données personnelles. Nous nous engageons à protéger votre vie privée conformément au <strong>Règlement Général sur la Protection des Données (RGPD) de l'Union européenne</strong>, à la <strong>Loi japonaise sur la protection des informations personnelles (APPI)</strong>, à la <strong>Loi générale brésilienne sur la protection des données (LGPD)</strong> et à toute autre législation applicable en matière de protection des données.</p>
+<h3>Avis propre à chaque version</h3><ul>
+<li><strong>Version 1.3.8 et ultérieures :</strong> La sauvegarde de progression est un export/import JSON local déclenché par vous. L'Application ne téléverse pas de nouvelles sauvegardes de progression vers un serveur. Le Suivi de sécurité conserve sur l'appareil jusqu'aux 288 points les plus récents uniquement pendant que l'Application peut fonctionner et crée un résumé en texte brut qui ne quitte l'appareil que si vous le partagez expressément. Il ne crée ni session serveur, ni lien de suivi, ni jeton d'accès, ni enregistrement serveur conservé 7 jours. La connexion Firebase et l'accès à Firestore sont maintenus uniquement afin que les utilisateurs existants puissent gérer ou supprimer leurs anciennes données cloud et leur compte.</li>
+<li><strong>Version 1.3.7 et antérieures :</strong> Si vous activez l'ancienne Sauvegarde cloud ou le Suivi de sécurité/partage basé sur serveur, les données peuvent encore être traitées comme décrit ci-dessous, notamment le stockage de progression dans Firestore et les enregistrements de suivi par lien avec jeton conservés jusqu'à 7 jours. Nous recommandons de passer à la version 1.3.8 ou ultérieure.</li></ul>
+<p>Dans la présente politique, les mentions de Sauvegarde cloud, de Suivi de sécurité serveur, de liens ou jetons de suivi et de conservation pendant 7 jours ne s'appliquent qu'à la version 1.3.7 et aux versions antérieures. Dans la version 1.3.8 et les versions ultérieures, vous choisissez la destination des fichiers JSON exportés et du texte de sécurité partagé ; la destination choisie les traite ensuite selon ses propres conditions de confidentialité.</p>
 <br>
 <hr>
 <br>
@@ -60,7 +64,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <tr><th>Paramètre du mode Sacred Trails</th><th>Suivre si vous poursuivez les deux pèlerinages</th><th>SharedPreferences</th></tr>
 </table>
 <br>
-<h3>2.2 Données transmises à un serveur (uniquement lorsque le Suivi de sécurité est activé)</h3>
+<h3>2.2 Données transmises à un serveur (ancienne version 1.3.7 et antérieures uniquement)</h3>
 <br>
 <table>
 <tr><th>Donnée</th><th>Finalité</th><th>Stockage</th><th>Conservation</th></tr>
@@ -74,7 +78,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p><strong>Aucune donnée de suivi n'est collectée sans votre consentement affirmatif et éclairé.</strong></p>
 <br>
-<h3>2.3 Sauvegarde cloud (connexion facultative)</h3>
+<h3>2.3 Sauvegarde cloud (ancienne version 1.3.7 et antérieures ; 1.3.8+ uniquement pour suppression héritée)</h3>
 <br>
 <p>Si vous choisissez de vous connecter avec Google ou Apple, les données suivantes sont collectées et stockées dans Google Cloud Firestore :</p>
 <br>
@@ -127,11 +131,11 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p>La progression des accomplissements, les préférences linguistiques, le cache météorologique et les paramètres d'itinéraire sont stockés à l'aide de SharedPreferences de Flutter sur votre appareil. Ces données ne bénéficient pas de chiffrement supplémentaire au-delà du chiffrement au niveau de l'appareil fourni par votre système d'exploitation (iOS Data Protection / chiffrement basé sur les fichiers Android).</p>
 <br>
-<h3>5.2 Stockage serveur (Suivi de sécurité uniquement)</h3>
+<h3>5.2 Stockage serveur (ancienne version 1.3.7 et antérieures uniquement)</h3>
 <br>
 <p>Lorsque le Suivi de sécurité est activé, les coordonnées GPS et les horodatages sont transmis via <strong>HTTPS</strong> (TLS 1.2 ou supérieur). L'accès aux données de suivi est contrôlé par un jeton unique, généré de manière cryptographiquement aléatoire pour chaque session de suivi.</p>
 <br>
-<h3>5.3 Stockage cloud (Sauvegarde cloud uniquement)</h3>
+<h3>5.3 Stockage cloud (ancienne version 1.3.7 et antérieures uniquement)</h3>
 <br>
 <p>Lorsque vous vous connectez et synchronisez, vos données de progression (sans coordonnées GPS) sont stockées dans <strong>Google Cloud Firestore</strong> dans la région <strong>asia-northeast1 (Tokyo)</strong>. Les données sont chiffrées au repos et en transit par Google Cloud. L'accès est restreint à votre seul compte authentifié, garanti par les règles de sécurité Firestore.</p>
 <br>

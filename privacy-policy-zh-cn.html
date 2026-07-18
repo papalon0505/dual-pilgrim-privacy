@@ -28,9 +28,15 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 </div>
 <h1>Sacred Trails - 隐私政策</h1>
 <br>
-<p><strong>最后更新日期：2026年3月24日</strong></p>
+<p><strong>最后更新日期：2026年7月18日</strong></p>
 <br>
 <p>本隐私政策描述了 Sacred Trails（以下简称"应用"、"我们"）及其开发者 Luke Chiang（以下简称"数据控制者"）如何收集、使用、存储和保护您的个人数据。我们致力于依照<strong>《欧盟通用数据保护条例》(GDPR)</strong>、<strong>《日本个人信息保护法》(APPI)</strong>、<strong>《巴西通用数据保护法》(LGPD)</strong> 及其他适用的数据保护法律保护您的隐私。</p>
+<h3>版本适用说明</h3>
+<ul>
+<li><strong>1.3.8 及更高版本：</strong>进度备份是由您主动执行的本地 JSON 导出／导入；应用不会把新的进度备份上传至服务器。安全追踪只会在应用可运行时，把最近 288 个定位点存储在设备上，并生成只有在您明确分享时才会离开设备的纯文本摘要；不会创建服务器会话、追踪链接、访问令牌或保留 7 天的服务器记录。Firebase 登录及 Firestore 访问仅保留供现有用户管理或删除旧云端数据和账号。</li>
+<li><strong>1.3.7 及更早版本：</strong>如果您启用旧版云备份或服务器安全追踪／分享功能，数据仍可能按下文处理，包括 Firestore 进度存储，以及最长保留 7 天的令牌链接追踪记录。建议更新至 1.3.8 或更高版本。</li>
+</ul>
+<p>本政策中提及的云备份、服务器安全追踪、追踪链接或令牌，以及 7 天追踪数据保留，仅适用于 1.3.7 及更早版本。在 1.3.8 及更高版本中，您自行选择 JSON 导出文件及安全文本摘要的发送目的地；所选目的地之后会依其自身隐私条款处理数据。</p>
 <br>
 <hr>
 <br>
@@ -60,7 +66,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <tr><th>双朝圣模式设置</th><th>记录您是否同时进行两条朝圣之路</th><th>SharedPreferences</th></tr>
 </table>
 <br>
-<h3>2.2 传输至服务器的数据（仅在启用安全追踪时）</h3>
+<h3>2.2 传输至服务器的数据（仅限旧版 1.3.7 及更早版本）</h3>
 <br>
 <table>
 <tr><th>数据</th><th>用途</th><th>存储方式</th><th>保留期限</th></tr>
@@ -74,7 +80,7 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p><strong>未经您的明确知情同意，我们绝不会收集任何追踪数据。</strong></p>
 <br>
-<h3>2.3 云备份（可选登录）</h3>
+<h3>2.3 云备份（旧版 1.3.7 及更早版本；1.3.8+ 仅用于删除旧数据）</h3>
 <br>
 <p>如果您选择使用 Google 或 Apple 账号登录，以下数据将被收集并存储在 Google Cloud Firestore 中：</p>
 <br>
@@ -127,11 +133,11 @@ a{color:#DAA520}hr{border:none;border-top:1px solid #eee;margin:24px 0}
 <br>
 <p>成就进度、语言偏好、天气缓存和路线设置使用 Flutter 的 SharedPreferences 存储在您的设备上。除操作系统提供的设备级加密（iOS 数据保护 / Android 基于文件的加密）外，这些数据不作额外加密处理。</p>
 <br>
-<h3>5.2 服务器存储（仅限安全追踪）</h3>
+<h3>5.2 服务器存储（仅限旧版 1.3.7 及更早版本）</h3>
 <br>
 <p>启用安全追踪后，GPS 坐标和时间戳通过 <strong>HTTPS</strong>（TLS 1.2 及以上版本）传输。每次追踪会话均会生成唯一的加密随机令牌来控制追踪数据的访问权限。</p>
 <br>
-<h3>5.3 云存储（仅限云备份）</h3>
+<h3>5.3 云存储（仅限旧版 1.3.7 及更早版本）</h3>
 <br>
 <p>当您登录并同步后，您的进度数据（不含 GPS 坐标）将存储在 <strong>Google Cloud Firestore</strong> 的 <strong>asia-northeast1（东京）</strong> 区域。数据由 Google Cloud 进行静态加密和传输加密。访问权限仅限于您经过身份验证的账号，并通过 Firestore 安全规则强制执行。</p>
 <br>
